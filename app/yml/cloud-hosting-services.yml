@@ -1,0 +1,90 @@
+lotName: cloud hosting
+
+section:
+  - sectionName: Category
+    sectionId: category
+    selectionType: checkbox
+    primaryCategories: 
+    - name: Archiving, backup and disaster recovery
+      id: archiving-backup-and-disaster-recovery
+    - name: Compute and application hosting
+      id: compute-and-application-hosting
+    - name: Container service 
+      id: container-service 
+    - name: Content delivery network
+      id: content-delivery-network
+    - name: Data warehousing
+      id: data-warehousing
+    - name: NoSQL database 
+      id:  nosql-database 
+    - name: Relational database
+      id: relational-database
+    - name: Other database services
+      id: other-database-services
+    - name: Distributed denial of service attack (DDOS) protection
+      id: ddos-protection
+    - name: Firewall
+      id: firewall
+    - name: Infrastructure and platform security
+      id: infrastructure-and-platform-security
+    - name: Intrusion detection
+      id: intrusion-detection
+    - name: Load balancing
+      id: load-balancing
+    - name: Logging and analysis
+      id: logging-and-analysis
+    - name: Message queuing and processing
+      id: message-queuing-and-processing
+    - name: Networking (including network as a service)
+      id: networking
+    - name: Platform as a service (PaaS)
+      id: paas
+    - name: Protective monitoring
+      id: protective-monitoring
+    - name: Search
+      id: search
+      # subCategories:
+      # - name: poodle
+      #   id: poddle
+      # - name: pug
+      #   id: pug
+  - sectionName: Provided by a reseller
+    sectionId: reseller
+    selectionType: radio
+    primaryCategories: 
+    - name: Not a reseller
+      id: not-a-reseller
+    - name: Reseller
+      id: reseller
+      subCategorySelectionType: checkbox
+      subCategories:
+      - name: Providing extra features and support not available from the original supplier
+        id: reseller-extra-features
+      - name: Providing extra support
+        id: reseller-extra-support
+      - name: Not providing extra features or support
+        id: reseller-no-extra-features
+  - sectionName: User support
+    sectionId: user-support
+    selectionType: checkbox
+    primaryCategories: 
+    - name: Email or online ticketing support
+      id: email-support
+      subCategorySelectionType: checkbox
+      subCategories:
+      - name: Case management
+        id: case-management
+    - name: Phone support
+      id: phone-support
+      subCategorySelectionType: radio
+      subCategories:
+      - name: 24 hours, 7 days a week
+        id: phone-support-24-hours
+      - name:  9 to 5 (UK time), 7 days a week
+        id: phone-support-office-7-days
+      - name:  9 to 5 (UK time), Monday to Friday
+        id: phone-support-office-monday-friday
+
+services:
+  - serviceName: Claus hosting
+  - serviceName: Santa Claus hosting

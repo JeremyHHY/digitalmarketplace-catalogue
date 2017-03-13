@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Digital Marketplace prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="#">Digital Marketplace</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Choose the type of service
+      </h1>
+
+    </div>
+  </div>
+
+  <div class='grid-row'>
+      <div class='column-two-thirds'>
+
+        <ul class='primary-category'>
+          {% for item in lots %}
+            <li class=''>
+              <a href='/filters/{{ item.nextPage }}'>{{ item.lotName }}</a>
+              <!--div class='lot-description'>
+                {{ item.lotDescription | safe }}
+              </div-->
+            </li>
+          {% endfor %}
+        </ul>
+
+      </div>
+
+      <!-- div class='column-one-third'>
+        <h2 class='heading-small'>
+          Help buying cloud services
+        </h2>
+        <ul>
+          <li>
+            <a href='#'>How to buy cloud services</a>
+          </li>
+        </ul>
+      </div -->
+
+  </div>
+</main>
+
+{% endblock %}
+
+

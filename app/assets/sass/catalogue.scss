@@ -1,0 +1,62 @@
+
+.primary-category {
+  li {
+    margin-top: 20px;
+    a {
+      @include core-19;
+      font-weight: bold;
+      text-decoration: none;
+      &:visited {
+        color: $link-colour;
+      }
+    }
+    .lot-description {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      ul {
+        list-style: disc;
+        li {
+          margin-left: 20px;
+          padding-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+.search-summary {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.filter-control {
+  background-color: BLANCHEDALMOND;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  border-bottom: 1px solid $border-colour;
+  display: block;
+  .heading-medium {
+    margin-top: 0px;
+    color: $link-colour;
+  }
+  &:hover {
+    background-color: $highlight-colour;
+    cursor: pointer;
+  }
+}
+
+.filter-group {
+
+}
+
+.form-group {
+  margin-top: 20px;
+}
+
+
+  
+.filter-feedback {
+
+}

@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Digital Marketplace prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="#">Digital Marketplace</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Find a {{ lotName }} service
+      </h1>
+
+    </div>
+  </div>
+
+  <div class='grid-row'>
+      <div class='column-one-third'>
+
+        <div class='filter-feedback'>
+          <div class='search-summary'>
+            <span class='heading-medium'>
+              {{ services.length }}
+            </span> services
+          </div>
+          <span class='' style=''>
+            <a href='#'>
+              View services
+            </a>
+          </span>
+        </div>
+
+      </div>
+      <div class='column-two-thirds'>
+
+        {% for item in section %}
+          <div class='filter-group'>
+            <div class='filter-control' data-target="{{ item.sectionId }}">
+              <h3 class='heading-medium'>
+                {{ item.sectionName }}
+              </h3>
+            </div>
+            <fieldset class="form-group js-hidden" id="{{ item.sectionId }}">
+              {% for category in item.primaryCategories %}
+              <label class="block-label" for="{{ category.id }}" data-target="subcategories_of_{{ category.id }}">
+                <input type="{{ item.selectionType }}" name="{{ item.sectionName }}" value="{{ category.id }}" id="{{ category.id }}">
+                {{ category.name }}
+              </label>
+              {% if category.subCategories %}
+                <div class="panel panel-border-narrow js-hidden" id="subcategories_of_{{ category.id }}">
+                  {% for subcategory in category.subCategories %}
+                      <label for="{{ subcategory.id }}" class="block-label block-label">
+                        <input type="{{ category.subCategorySelectionType }}" name="{{ subcategory.name }}" value="true" id="{{ subcategory.id }}">
+                        {{ subcategory.name }}
+                      </label>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </fieldset>
+        </div>
+      {% endfor %}
+
+      </div>
+
+  </div>
+</main>
+
+{% endblock %}
+
+

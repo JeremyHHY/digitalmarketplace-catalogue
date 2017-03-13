@@ -1,0 +1,22 @@
+lots:
+  - lotName: Cloud hosting
+    nextPage: cloud-hosting-services
+    lotDescription: >
+        Platform or infrastructure services that helps you:
+        <ul>
+          <li>deploy, manage and run software</li>
+          <li>provision and use processing, storage or networking resources</li>
+        </ul>
+    service:
+      - serviceName: Alexey’s cloud hosting
+      - serviceName: Alexey’s cloud hosting 2
+  - lotName: Cloud software
+    nextPage: cloud-software-services
+    lotDescription: Applications that are accessed over the internet and hosted in the cloud.
+    service:
+      - serviceName: Alexey’s cloud hosting
+      - serviceName: Alexey’s cloud supports
+    id: cloud-software
+  - lotName: Cloud support
+    nextPage: cloud-support-services
+    lotDescription: Services to help set up and maintain cloud software or hosting services.
