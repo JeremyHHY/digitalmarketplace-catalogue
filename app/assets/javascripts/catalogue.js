@@ -7,5 +7,7 @@ $(".catalogue-primary").click(function(event) {
 $(".filter-control").click(function(event) {
   var target = $( event.target )
   $('#' + target.attr('data-target')).toggleClass('js-hidden');
+  $('#' + 'plus-' + target.attr('data-target')).toggleClass('js-hidden');
+  $('#' + 'minus-' + target.attr('data-target')).toggleClass('js-hidden');
 });
 

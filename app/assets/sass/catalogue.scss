@@ -3,7 +3,7 @@
   li {
     margin-top: 20px;
     a {
-      @include core-19;
+      @include core-24;
       font-weight: bold;
       text-decoration: none;
       &:visited {
@@ -24,6 +24,10 @@
   }
 }
 
+.panel {
+  margin-bottom: 20px !important;
+}
+
 .search-summary {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -31,9 +35,6 @@
 
 
 .filter-control {
-  background-color: BLANCHEDALMOND;
-  width: 100%;
-  height: 100%;
   padding-top: 20px;
   border-bottom: 1px solid $border-colour;
   display: block;
@@ -44,6 +45,12 @@
   &:hover {
     background-color: $highlight-colour;
     cursor: pointer;
+  }
+  .plus {
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 20px;
+    float: right;
   }
 }
 

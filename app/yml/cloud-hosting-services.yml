@@ -48,7 +48,7 @@ section:
       #   id: poddle
       # - name: pug
       #   id: pug
-  - sectionName: Provided by a reseller
+  - sectionName: Reseller
     sectionId: reseller
     selectionType: radio
     primaryCategories: 
@@ -57,6 +57,7 @@ section:
     - name: Reseller
       id: reseller
       subCategorySelectionType: checkbox
+      subCategoryTitle: Reseller type
       subCategories:
       - name: Providing extra features and support not available from the original supplier
         id: reseller-extra-features
@@ -71,19 +72,77 @@ section:
     - name: Email or online ticketing support
       id: email-support
       subCategorySelectionType: checkbox
+      subCategoryTitle: This is a subcategory title
       subCategories:
-      - name: Case management
+      - name: Support case management
         id: case-management
     - name: Phone support
       id: phone-support
       subCategorySelectionType: radio
+      subCategoryTitle: Phone support hours
       subCategories:
       - name: 24 hours, 7 days a week
         id: phone-support-24-hours
-      - name:  9 to 5 (UK time), 7 days a week
+      - name:  9 to 5, 7 days a week
         id: phone-support-office-7-days
-      - name:  9 to 5 (UK time), Monday to Friday
+      - name:  9 to 5, Monday to Friday
         id: phone-support-office-monday-friday
+    - name: Webchat support
+      id: webchat-support
+      subCategorySelectionType: radio
+      subCategoryTitle: Webchat support hours
+      subCategories:
+      - name: 24 hours, 7 days a week
+        id: phone-support-24-hours
+      - name:  9 to 5, 7 days a week
+        id: phone-support-office-7-days
+      - name:  9 to 5, Monday to Friday
+        id: phone-support-office-monday-friday
+    - name: Onsite support
+      id: onsite-support
+    - name: Support available to third-party suppliers
+      id: third-party-support
+  - sectionName: Using the service
+    sectionId: using-the-service
+    selectionType: checkbox
+    primaryCategories: 
+    - name: Web interface
+      id: web-interface
+      subCategorySelectionType: checkbox
+      subCategoryTitle: Web interface accessibility
+      subCategories:
+      - name: WCAG 2.0 AAA 
+        id: web-interface-wcag2aaa
+      - name: WCAG 2.0 AA or EN 301 549
+        id: web-interface-wcag2aa
+      - name: WCAG 2.0 A
+        id: web-interface-wcag2a
+    - name: API
+      id: api
+      subCategorySelectionType: checkbox
+      subCategoryTitle: API automation tools
+      subCategories:
+      - name: Ansible
+        id: api-ansible
+      - name: Chef
+        id: api-chef
+      - name: OpenStack
+        id: api-openStack
+      - name: SaltStack
+        id: api-saltStack
+      - name: Terraform
+        id: api-terraform
+      - name: Puppet
+        id: api-puppet
+      - name: Other
+        id: api-other
+    - name: Command line interface
+      id: command-line-interface
+      subCategorySelectionType: checkbox
+      subCategoryTitle: This is a subcategory title
+      subCategories:
+      - name: Ansible
+        id: api-ansible
 
 services:
   - serviceName: Claus hosting
