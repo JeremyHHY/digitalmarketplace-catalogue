@@ -63,8 +63,8 @@ Digital Marketplace prototype
             {{ item.supplierName }}
           </p>
           <p>
-            {% for section in item.serviceSection %}
-              {% if section.contentType == 'summary' %}
+            {% for section in item.primarySections %}
+              {% if section.type == 'summary' %}
                 {{ section.content }}
               {% endif %}
             {% endfor %}

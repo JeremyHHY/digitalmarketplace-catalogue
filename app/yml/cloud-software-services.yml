@@ -23,28 +23,6 @@ section:
       id: relational-database
     - name: Other database services
       id: other-database-services
-    - name: Distributed denial of service attack (DDOS) protection
-      id: ddos-protection
-    - name: Firewall
-      id: firewall
-    - name: Infrastructure and platform security
-      id: infrastructure-and-platform-security
-    - name: Intrusion detection
-      id: intrusion-detection
-    - name: Load balancing
-      id: load-balancing
-    - name: Logging and analysis
-      id: logging-and-analysis
-    - name: Message queuing and processing
-      id: message-queuing-and-processing
-    - name: Networking (including network as a service)
-      id: networking
-    - name: Platform as a service (PaaS)
-      id: paas
-    - name: Protective monitoring
-      id: protective-monitoring
-    - name: Search
-      id: search
       # subCategories:
       # - name: poodle
       #   id: poddle
@@ -67,6 +45,23 @@ section:
         id: reseller-extra-support
       - name: Not providing extra features or support
         id: reseller-no-extra-features
+  - name: hello world
+    sectionId: reseller
+    selectionType: radio
+    primaryCategories: 
+    - name: Not a reseller
+      id: not-a-reseller
+    - name: Reseller
+      id: reseller
+      subCategorySelectionType: checkbox
+      subCategoryTitle: Reseller type
+      subCategories:
+      - name: Providing extra features and support not available from the original supplier
+        id: reseller-extra-features
+      - name: Providing extra support
+        id: reseller-extra-support
+      - name: Not providing extra features or support
+        id: reseller-no-extra-features      
   - name: User support
     sectionId: user-support
     selectionType: checkbox
@@ -218,5 +213,72 @@ services:
     contact: 
       - Clare Jackson
       - 01442 883366
-    contactemail: Procurement.Portal@kcom.com
+      - Procurement.Portal@kcom.com
+  - service0: 
+    supplierName: Smart421 Ltd 2
+    serviceName: Smart421 Hadoop in the Cloud Fooo 2
+    primarySections:
+      - name: Categories
+        type: list
+        content: 
+          - NoSQL database 
+          - Infrastructure and platform security
+      - name: 
+        type: summary
+        content: Smart421 Hadoop in the Cloud is based on Skyscape’s implementation of Hadoop, enabling organisations to explore a big data solution delivered as a cloud service, minimising the investment in cost, time and risk associated with on-premises purchasing, provisioning and configuring Hadoop infrastructure, platforms and licenses.
+      - name: Features
+        type: list
+        content: 
+          - this is great hosting
+          - you should buy this, yeah!
+      - name: Benefits
+        type: list
+        content: 
+          - Foo
+          - Bar
+      - name: Service scope
+        secondarySections:
+        - type: paragraph
+          name: Service constraints
+          content: Constraints might include planned maintenance arrangements.
+        - type: paragraph
+          name: System requirements
+          content: Constraints might include planned maintenance arrangements.
+      - name: Reselling
+        secondarySections:
+        - type: paragraph
+          name: Reseller type
+          content: Not a reseller
+      - name: User support
+        secondarySections:
+        - type: paragraph
+          name: Email support
+          content: Included in price of service
+          tertiarySections: 
+          - type: list
+            name: Online ticketing 
+            content: 
+              - 'Available'
+              - WCAG 2.0 AA
+          - type: paragraph
+            name: Response time
+            content: Within 2 hours for critical enquiries, 24 hours for general enquiries. Don’t worry, we’re really good at answering emails.
+    price: 0.45 per terabyte
+    metaCategories:
+      - key: Minimum contract perdiod
+        value: 1 hour
+      - key: Free trial available at
+        value: www.example.com/freetrial-long-url-here-gonna-break-some-stuff
+      - key: Service ID
+        value: 123456789
+      - key: Framework
+        value: G-Cloud 9
+    documents:
+      - Price
+      - SFIA Rate card
+    contact: 
+      - Clare Jackson
+      - 01442 883366
+      - Procurement.Portal@kcom.com
+
 
