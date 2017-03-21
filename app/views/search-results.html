@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Digital Marketplace prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="#">Digital Marketplace</a></li>
+      <li><a href="/categories/categories">Choose the type of service</a></li>
+      <li><a href="/filters/{{ lotURL }}">Enter your {{ lotName }} requirements</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {{ lotNameCaps }} that meets your requirements
+      </h1>
+
+    </div>
+  </div>
+
+  <div class='grid-row'>
+    <div class='column-one-third'>
+
+      <div class='filter-feedback'>
+        <div class='search-summary'>
+
+          <span class='heading-medium'>
+            {{ services.length }}
+          </span> services
+
+          <p>
+            Summary of search
+          </p>
+
+          <p>
+            <a href='#'>
+              Email this list of services
+            </a>
+          </p>
+
+          <p>
+            <a href='/filters/{{ lotURL }}'>
+              Update your requirements
+            </a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <div class='column-two-thirds'>
+      {% for item in services %}
+        <div class='service-listing'>
+          <h3 class=''><a href='#'>{{ item.serviceName }}</a></h3>
+          <p>
+            {{ item.supplierName }}
+          </p>
+          <p>
+            {% for section in item.serviceSection %}
+              {% if section.contentType == 'summary' %}
+                {{ section.content }}
+              {% endif %}
+            {% endfor %}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
+
+

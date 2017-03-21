@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Digital Marketplace prototype
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="#">Digital Marketplace</a></li>
+      <li><a href="/categories/categories">Choose the type of service</a></li>
+      <li><a href="/filters/{{ lotURL }}">Enter your {{ lotName }} requirements</a></li>
+      <li><a href="/search-results/{{ lotURL }}">{{ lotNameCaps }} that meets your requirements</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        {{ services[service].serviceName }}
+      </h1>
+
+    </div>
+  </div>
+  <div class='grid-row'>
+    <div class='column-two-thirds'>
+      <p>
+        {{ services[service].serviceDescription }}
+      </p>
+      {% for section in services[service].primarySections %}
+        <h2 class='heading-medium'>
+          {{ section.name }}
+        </h2>
+        {% if section.type == 'summary' or section.type == 'paragraph' %}
+          <p>
+            {{ section.content }}
+          </p>
+        {% elif section.type == 'list' %}
+        <ul class='bullet-list'>
+          {% for listItem in section.content %}
+            <li>{{ listItem }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% for section2 in section.secondarySections %}
+          <h3 class='heading-small'>
+            {{ section2.name }}
+          </h3>
+          {% if section2.type == 'paragraph' %}
+            <p>
+              {{ section2.content }}
+            </p>
+          {% elif section2.type == 'list' %}
+            <ul class='bullet-list'>
+              {% for listItem in section2.content %}
+                <li>{{ listItem }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% for section3 in section2.tertiarySections %}
+          <div class='tertiary-section'>
+            <h4 class=''>{{ section3.name }}:</h4>
+            {% if section3.type == 'paragraph' %}
+              <p class=''>{{ section3.content }}</p>
+            {% else %}
+              <ul class='bullet-list'>
+                {% for section4 in section3.content %}
+                <li>{{ section4 }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+          {% endfor %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+    <div class='column-one-third'>
+      <h4 class='heading-medium'>{{ services[service].price }}</h4>
+      {% for meta in services[service].metaCategories %}
+        <h4 class='heading-small'>{{ meta.key }}</h4>
+        <p>{{ meta.value }}</p>
+      {% endfor %}
+      {% for documents in services[service].documents %}
+      <ul class='document-list'>
+        <li class='document-list-item'>
+           <a href="#" class='document-link-with-icon' >
+             <span class='document-icon'>PDF<span> document:</span></span>
+            {{ documents }}
+          </a>
+        </li>
+      </ul>
+      {% endfor %}
+      <h4 class='heading-small'>Contact</h4>
+      {% for details in services[service].contact %}
+        <ul>
+          <li>{{ details }}</li>
+        </ul>
+      {% endfor %}
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

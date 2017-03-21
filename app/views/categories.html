@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Digital Marketplace prototype
+Digital Marketplace prototype
 {% endblock %}
 
 {% block content %}
@@ -25,35 +25,38 @@
   </div>
 
   <div class='grid-row'>
-      <div class='column-two-thirds'>
+    <div class='column-two-thirds'>
 
-        <ul class='primary-category'>
-          {% for item in lots %}
-            <li class=''>
-              <a href='/filters/{{ item.nextPage }}'>{{ item.lotName }}</a>
+      <ul class='primary-category'>
+        {% for item in lots %}
+        <li class=''>
+          <a href='/filters/{{ item.nextPage }}'>{{ item.lotName }}</a>
               <!--div class='lot-description'>
                 {{ item.lotDescription | safe }}
               </div-->
             </li>
-          {% endfor %}
-        </ul>
+            {% endfor %}
+          </ul>
 
+        </div>
+
+
+        <div class='colum-one-third'>
+            <h2 class='heading-small'>
+              Guidance on buying cloud services
+            </h2>
+            <p>
+              Buying cloud services isn’t as easy as you’d think.
+            </p>
+            <ul>
+              <li>
+                <a href='#'>Read guidance on buying cloud services</a>
+              </li>
+            </ul>
+        </div>
       </div>
+    </main>
 
-      <!-- div class='column-one-third'>
-        <h2 class='heading-small'>
-          Help buying cloud services
-        </h2>
-        <ul>
-          <li>
-            <a href='#'>How to buy cloud services</a>
-          </li>
-        </ul>
-      </div -->
-
-  </div>
-</main>
-
-{% endblock %}
+    {% endblock %}
 
 

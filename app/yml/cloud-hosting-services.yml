@@ -1,7 +1,9 @@
 lotName: cloud hosting
+lotNameCaps: Cloud hosting
+lotURL: cloud-hosting-services
 
 section:
-  - sectionName: Category
+  - name: Category
     sectionId: category
     selectionType: checkbox
     primaryCategories: 
@@ -48,7 +50,7 @@ section:
       #   id: poddle
       # - name: pug
       #   id: pug
-  - sectionName: Reseller
+  - name: Reseller
     sectionId: reseller
     selectionType: radio
     primaryCategories: 
@@ -65,7 +67,7 @@ section:
         id: reseller-extra-support
       - name: Not providing extra features or support
         id: reseller-no-extra-features
-  - sectionName: User support
+  - name: User support
     sectionId: user-support
     selectionType: checkbox
     primaryCategories: 
@@ -102,7 +104,7 @@ section:
       id: onsite-support
     - name: Support available to third-party suppliers
       id: third-party-support
-  - sectionName: Using the service
+  - name: Using the service
     sectionId: using-the-service
     selectionType: checkbox
     primaryCategories: 
@@ -139,11 +141,83 @@ section:
     - name: Command line interface
       id: command-line-interface
       subCategorySelectionType: checkbox
-      subCategoryTitle: This is a subcategory title
+      subCategoryTitle: Compatible operating systems
       subCategories:
-      - name: Ansible
-        id: api-ansible
+      - name: Linux or Unix
+        id: cli-linux
+      - name: macOS
+        id: cli-macos
+      - name: Windows
+        id: cli-windows
+      - name: Other
+        id: cli-other
 
-services:
-  - serviceName: Claus hosting
-  - serviceName: Santa Claus hosting
+services: 
+  - service0: 
+    supplierName: Smart421 Ltd 2
+    serviceName: Smart421 Hadoop in the Cloud Fooo 2
+    primarySections:
+      - name: Categories
+        type: list
+        content: 
+          - NoSQL database 
+          - Infrastructure and platform security
+      - name: 
+        type: summary
+        content: Smart421 Hadoop in the Cloud is based on Skyscape’s implementation of Hadoop, enabling organisations to explore a big data solution delivered as a cloud service, minimising the investment in cost, time and risk associated with on-premises purchasing, provisioning and configuring Hadoop infrastructure, platforms and licenses.
+      - name: Features
+        type: list
+        content: 
+          - Foo
+          - Bar
+      - name: Benefits
+        type: list
+        content: 
+          - Foo
+          - Bar
+      - name: Service scope
+        secondarySections:
+        - type: paragraph
+          name: Service constraints
+          content: Constraints might include planned maintenance arrangements.
+        - type: paragraph
+          name: System requirements
+          content: Constraints might include planned maintenance arrangements.
+      - name: Reselling
+        secondarySections:
+        - type: paragraph
+          name: Reseller type
+          content: Not a reseller
+      - name: User support
+        secondarySections:
+        - type: paragraph
+          name: Email support
+          content: Included in price of service
+          tertiarySections: 
+          - type: list
+            name: Online ticketing 
+            content: 
+              - 'Available'
+              - WCAG 2.0 AA
+          - type: paragraph
+            name: Response time
+            content: Within 2 hours for critical enquiries, 24 hours for general enquiries. Don’t worry, we’re really good at answering emails.
+    price: 0.45 per terabyte
+    metaCategories:
+      - key: Minimum contract perdiod
+        value: 1 hour
+      - key: Free trial available at
+        value: www.example.com/freetrial-long-url-here-gonna-break-some-stuff
+      - key: Service ID
+        value: 123456789
+      - key: Framework
+        value: G-Cloud 9
+    documents:
+      - Price
+      - SFIA Rate card
+    contact: 
+      - Clare Jackson
+      - 01442 883366
+      - Procurement.Portal@kcom.com
+
+

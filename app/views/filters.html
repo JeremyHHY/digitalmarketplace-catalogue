@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Digital Marketplace prototype
+Digital Marketplace prototype
 {% endblock %}
 
 {% block content %}
@@ -11,6 +11,7 @@
   <div class="breadcrumbs">
     <ol>
       <li><a href="#">Digital Marketplace</a></li>
+      <li><a href="/categories/categories">Choose the type of service</a></li>
     </ol>
   </div>
 
@@ -25,60 +26,76 @@
   </div>
 
   <div class='grid-row'>
-      <div class='column-one-third'>
+    <div class='column-one-third'>
 
-        <div class='filter-feedback'>
-          <div class='search-summary'>
-            <span class='heading-medium'>
-              {{ services.length }}
-            </span> services
+      <div class='filter-feedback'>
+        <div class='search-summary'>
+          <span class='heading-medium'>
+            {{ services.length }}
+          </span> services
+        </div>
+        <span class='' style=''>
+          <a href='/search-results/{{ lotURL }}'>
+            View services
+          </a>
+        </span>
+      </div>
+
+    </div><!-- end of .column-one-third -->
+
+
+    <div class='column-two-thirds'>
+
+      {% for item in section %}
+      <div class='section'>
+        <div class='filter-control' data-target="{{ item.sectionId }}" data-target="plus-{{ item.sectionId }}">
+          <div class='plus' id="plus-{{ item.sectionId }}">
+            +
           </div>
-          <span class='' style=''>
-            <a href='#'>
-              View services
-            </a>
-          </span>
+          <div class='plus js-hidden' id="minus-{{ item.sectionId }}">
+            –
+          </div>
+          <h3 class='heading-medium' data-target="{{ item.sectionId }}">
+            {{ item.name }}
+          </h3>
         </div>
 
-      </div>
-      <div class='column-two-thirds'>
 
-        {% for item in section %}
-            <div class='filter-control' data-target="{{ item.sectionId }}" data-target="plus-{{ item.sectionId }}">
-              <div class='plus' id="plus-{{ item.sectionId }}">
-                +
-              </div>
-              <div class='plus js-hidden' id="minus-{{ item.sectionId }}">
-                –
-              </div>
-              <h3 class='heading-medium' data-target="{{ item.sectionId }}">
-                {{ item.sectionName }}
-              </h3>
-            </div>
-            <div class="form-group js-hidden" id="{{ item.sectionId }}">
-              {% for category in item.primaryCategories %}
+        <form>
+          <div class="form-group js-hidden" id="{{ item.sectionId }}">
+            {% for category in item.primaryCategories %}
               <label class="block-label" for="{{ category.id }}" data-target="subcategories_of_{{ category.id }}">
-                <input type="{{ item.selectionType }}" name="{{ item.sectionName }}" value="{{ category.id }}" id="{{ category.id }}">
+                <input type="{{ item.selectionType }}" name="{{ item.name }}" value="{{ category.id }}" id="{{ category.id }}">
                 {{ category.name }}
               </label>
+
               {% if category.subCategories %}
+              <form>
                 <div class="panel panel-border-narrow js-hidden" id="subcategories_of_{{ category.id }}">
-                  <h4 class='heading-small'>{{ category.subCategoryTitle }}</h4>
+                  <h4 class='heading-small'>{{ category.name }}</h4>
                   {% for subcategory in category.subCategories %}
-                      <label for="{{ subcategory.id }}" class="block-label block-label">
-                        <input type="{{ category.subCategorySelectionType }}" name="{{ subcategory.name }}" value="true" id="{{ subcategory.id }}">
-                        {{ subcategory.name }}
-                      </label>
+                    <label for="{{ subcategory.id }}" class="block-label block-label">
+                      <input type="{{ category.subCategorySelectionType }}" name="{{ subcategory.name }}" value="true" id="{{ subcategory.id }}">
+                      {{ subcategory.name }}
+                    </label>
                   {% endfor %}
                 </div>
+              </form>
               {% endif %}
+
             {% endfor %}
-          </div>
+          </div> <!-- end of  .form-group -->
+        </form>
+
+
+        
+      </div><!-- end of .section -->
       {% endfor %}
 
-      </div>
 
-  </div>
+      
+    </div><!-- end of .column-two-thirds -->
+  </div><!-- end of .grid-row -->
 </main>
 
 {% endblock %}
