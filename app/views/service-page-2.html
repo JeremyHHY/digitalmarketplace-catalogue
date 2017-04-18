@@ -26,8 +26,6 @@ Digital Marketplace prototype
 
     </div>
   </div>
-
-
   <div class='grid-row'>
     <div class='column-two-thirds'>
       <p>
@@ -47,17 +45,19 @@ Digital Marketplace prototype
             <li>{{ listItem }}</li>
           {% endfor %}
         </ul>
+        {% elif section.type == 'link' %}
+          <a href='{{ section.content }}'>{{ section.content }}</a>
+        {% endif %}
+        {% if section.contactlink  %}
+            <a href='{{ section.contactlink }}'>{{ section.contactlink }}</a>
         {% endif %}
         {% for section2 in section.secondarySections %}
-        {% if section2.type == 'table' %}
-          hiiiiiiii
-        {%else%}
           <h3 class='heading-small'>
             {{ section2.name }}
           </h3>
           {% if section2.type == 'paragraph' %}
             <p>
-              {{ section2.content|safe }}
+              {{ section2.content }}
             </p>
           {% elif section2.type == 'list' %}
             <ul class='bullet-list'>
@@ -65,34 +65,6 @@ Digital Marketplace prototype
                 <li>{{ listItem }}</li>
               {% endfor %}
             </ul>
-          {% elif section2.type == 'table' %}
-            <table class="summary-item-body">
-
-          <caption class="visuallyhidden">
-            Summary table with manual rows
-          </caption>
-          <thead class="summary-item-field-headings">
-            <tr>
-              <th scope="col" class="summary-item-field-heading-first">
-                <span class="visuallyhidden">Label</span>
-              </th>
-              <th scope="col" class="summary-item-field-heading">
-                <span class="visuallyhidden">Value</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="summary-item-row">
-              <td  class="summary-item-field-first">
-                <span>Service Name</span>
-              </td>
-              <td  class="summary-item-field">
-                <span>Service 1</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-          {% endif %}
           {% endif %}
           {% for section3 in section2.tertiarySections %}
           <div class='tertiary-section'>
@@ -110,36 +82,39 @@ Digital Marketplace prototype
           {% endfor %}
         {% endfor %}
       {% endfor %}
-      </div>
-        <div class="column-full">
-      </div>
-      
-      <div class='column-one-third'>
-        <h4 class='heading-medium'>{{ services[service].price }}</h4>
-        {% for meta in services[service].metaCategories %}
+    </div>
+    <div class='column-one-third'>
+      <h4 class='heading-medium'>{{ services[service].price }}</h4>
+      {% for meta in services[service].metaCategories %}
         <h4 class='heading-small'>{{ meta.key }}</h4>
-        <p>{{ meta.value }}</p>
-        {% endfor %}
-        {% for documents in services[service].documents %}
-        <ul class='document-list'>
-          <li class='document-list-item'>
+        {% if meta.type == 'link' %}
+          <a href='{{ meta.value }}'>{{ meta.value }}</a>
+        {% else %}
+          <p>{{ meta.value }}</p>
+        {% endif %}
+      {% endfor %}
+        <a href='mailto:{{ services[service].value }}'>{{ services[service].value }}</a>
+        <a href='{{ services[service].websitelink }}'>{{ services[service].websitelink }}</a>
+      {% for documents in services[service].documents %}
+      <ul class='document-list'>
+        <li class='document-list-item'>
            <a href="#" class='document-link-with-icon' >
              <span class='document-icon'>PDF<span> document:</span></span>
-             {{ documents }}
-           </a>
-         </li>
-       </ul>
-       {% endfor %}
-       <h4 class='heading-small'>Contact</h4>
-       {% for details in services[service].contact %}
-       <ul>
-        <li>{{ details }}</li>
+            {{ documents }}
+          </a>
+        </li>
       </ul>
       {% endfor %}
-      <a href='mailto:{{ services[service].contactemail }}'>{{ services[service].contactemail }}</a>
+      <h4 class='heading-small'>Contact</h4>
+      <ul>
+      {% for details in services[service].contact %}
+          <li>{{ details }}</li>
+      {% endfor %}
+      </ul>
+        <a href='mailto:{{ services[service].contactemail }}'>{{ services[service].contactemail }}</a>
     </div>
   </div>
-  </main>
+</main>
 
 {% endblock %}
 

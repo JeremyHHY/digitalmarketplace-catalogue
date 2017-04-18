@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        {{ pageTitle }}
+      </h1>
+      
+    </div>
+  </div>
+  <div class='grid-row'>
+    <div class='column-two-thirds'>
+      
+      <h2 class='heading-medium'>
+        This is a loop with one type of content
+      </h2>
+      <ul class='bullet-list'>
+        {% for hyphens in list %}
+          <li>
+            {{ hyphens }}
+          </li>
+        {% endfor %}
+      </ul>
+      <h2 class='heading-medium'>
+        This is for loop with two types of content
+      </h2>
+      {% for hyphens in listWithTwo %}
+        <h3 class='heading-small'>
+          {{ hyphens.title }}
+        </h3>
+        <p>
+          {{ hyphens.content }}
+        </p>
+      {% endfor %}
+      <h2 class='heading-medium'>
+        Content treated differently by using an ‘if statement’
+      </h2>
+      {% for hyphens in listWithDifferentTypes %}
+        <h3 class='heading-small'>
+          {{ hyphens.title }}
+        </h3>
+        {% if hyphens.contentType == 'paragraph' %}
+          <p>
+            {{ hyphens.content }}
+          </p>
+        {% elif hyphens.contentType == 'link' %}
+          <a href='{{ hyphens.content }}'>
+            {{ hyphens.content }}
+          </a>
+        {% elif hyphens.contentType == 'list' %}
+          <ul class='bullet-list'>
+            {% for hyphensLayerTwo in hyphens.content %}
+              <li>
+                {{ hyphensLayerTwo }}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endfor %}
+      <h2 class='heading-medium'>
+        Nesting content
+      </h2>
+      {% for hyphens in listWithManyLayers %}
+        <div class='first-layer'>
+          <h3 class='heading-small'>
+            {{ hyphens.title }}
+          </h3>
+          <p>
+            {{ hyphens.content }}
+          </p>
+          {% for hyphensLayerTwo in hyphens.layerTwo %}
+            <div class='second-layer'>
+              <h3 class='heading-small'>
+                {{ hyphensLayerTwo.title }}
+              </h3>
+              <p>
+                {{ hyphensLayerTwo.content }}
+              </p>
+              {% for hyphensLayerThree in hyphensLayerTwo.layerThree %}
+                <div class='third-layer'>
+                  <h3 class='heading-small'>
+                    {{ hyphensLayerThree.title }}
+                  </h3>
+                  <p>
+                    {{ hyphensLayerThree.content }}
+                  </p>
+                    {% for hyphensLayerFour in hyphensLayerThree.layerFour %}
+                    <div class='fourth-layer'>
+                      <h3 class='heading-small'>
+                        {{ hyphensLayerFour.title }}
+                      </h3>
+                      <p>
+                        {{ hyphensLayerFour.content }}
+                      </p>
+                    </div>
+                    {% endfor %}
+                  </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+      <h2 class='heading-medium'>
+        Nesting and repeating content
+      </h2>
+      {% for hyphens in listWithManyLayersThatRepeats %}
+        <div class='first-layer'>
+          <h3 class='heading-small'>
+            {{ hyphens.title }}
+          </h3>
+          <p>
+            {{ hyphens.content }}
+          </p>
+          {% for hyphensLayerTwo in hyphens.layerTwo %}
+            <div class='second-layer'>
+              <h3 class='heading-small'>
+                {{ hyphensLayerTwo.title }}
+              </h3>
+              <p>
+                {{ hyphensLayerTwo.content }}
+              </p>
+              {% for hyphensLayerThree in hyphensLayerTwo.layerThree %}
+                <div class='third-layer'>
+                  <h3 class='heading-small'>
+                    {{ hyphensLayerThree.title }}
+                  </h3>
+                  <p>
+                    {{ hyphensLayerThree.content }}
+                  </p>
+                    {% for hyphensLayerFour in hyphensLayerThree.layerFour %}
+                    <div class='fourth-layer'>
+                      <h3 class='heading-small'>
+                        {{ hyphensLayerFour.title }}
+                      </h3>
+                      <p>
+                        {{ hyphensLayerFour.content }}
+                      </p>
+                    </div>
+                    {% endfor %}
+                  </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+      
+    </div>
+  </div>
+</main>
+{% endblock %}

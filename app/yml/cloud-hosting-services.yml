@@ -159,11 +159,18 @@ services:
     primarySections:
       - name: Categories
         type: list
-        content: 
-          - NoSQL database 
+        content:
+          - NoSQL database
+          - Message queuing and processing
+          - Networking (including network as a service)
+          - Protective monitoring
+          - Search
+          - Block storage
+          - Firewall
+          - Intrusion detection
+          - Platform as a service (PaaS)
           - Infrastructure and platform security
-      - name: 
-        type: summary
+      - type: summary
         content: Smart421 Hadoop in the Cloud is based on Skyscape’s implementation of Hadoop, enabling organisations to explore a big data solution delivered as a cloud service, minimising the investment in cost, time and risk associated with on-premises purchasing, provisioning and configuring Hadoop infrastructure, platforms and licenses.
       - name: Features
         type: list
@@ -190,10 +197,10 @@ services:
           content: Not a reseller
       - name: User support
         secondarySections:
-        - type: paragraph
+          type: paragraph
           name: Email support
           content: Included in price of service
-          tertiarySections: 
+        tertiarySections:
           - type: list
             name: Online ticketing 
             content: 
@@ -201,22 +208,257 @@ services:
               - WCAG 2.0 AA
           - type: paragraph
             name: Response time
-            content: Within 2 hours for critical enquiries, 24 hours for general enquiries. Don’t worry, we’re really good at answering emails.
+            content: Within 2 hours for critical enquiries, 24 hours for general enquiries. Don’t worry, we’re really good at answering emails. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis
+          - type: paragraph
+            name: Phone support
+            content: Included in price of service
+          - type: paragraph
+            name: Phone support availability
+            content: 9 to 5 (UK time), Monday to Friday  
+          - type: paragraph
+            name: Web chat support
+            content: Included in price of service
+          - type: paragraph
+            name: Web chat availability
+            content: 24 hours, 7 days a week
+          - type: paragraph
+            name: Web chat accessbility standards
+            content: WCAG 2.0 AA or EN 301 549
+          - type: paragraph
+            name: Description of web chat testing
+            content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.
+          - type: paragraph
+            name: Onsite support
+            content: Included in price of service
+          - type: paragraph
+            name: Support levels
+            content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.
+          - type: paragraph
+            name: Support availble to third parties
+            content: 'Yes'
+      - name: Using the service
+        secondarySections:
+        - type: paragraph
+          name: Is there a web interface
+          content: 'Yes'
+          tertiarySections:
+          - type: paragraph
+            name: Description of web interface
+            content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.
+          - type: paragraph
+            name: Web chat accessbility standards
+            content: WCAG 2.0 AA or EN 301 549
+          - type: paragraph
+            name: Web interface testing with assistive technology users
+            content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.
+        - type: paragraph
+          name: Is there an API for the service
+          content: 'Yes'
+          tertiarySections:
+          - type: paragraph
+            name: Description of web interface
+            content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.
+          - type: list
+            name: API automation tools
+            content: 
+            - Ansible
+            - Chef
+            - OpenStack
+            - SaltStack
+            - Terraform
+            - Puppet
+            - Other
+          - type: paragraph
+            name: API documentation
+            content: 'Yes'
+          - type: list
+            name: API documentation format
+            content: 
+            - Open API (also known as Swagger)
+            - HTML
+            - ODF or PDF
+        - type: paragraph
+          name: Command line interface
+          content: 'Yes'
+          tertiarySections:
+          - type: list
+            name: Command line interface compatibility
+            content: 
+              - Linux or Unix
+              - macOS
+              - Windows
+          - type: paragraph
+            name: Using the command line interface
+            content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.
+      - name: Metrics
+        secondarySections:
+        - type: paragraph
+          name: Do you provide infrastructure or application Metrics
+          content: 'Yes'
+          tertiarySections:
+          - type: list
+            name: Infrastructure or application Metrics
+            content:
+              - CPU
+              - Disk
+              - Memory
+              - HTTP request and response status
+          - type: list
+            name: Reporting types
+            content:
+              - Through an API
+              - Real-time dashboards
+              - Regular reports
+              - Reports on request
+      - name: Scaling
+        secondarySections:
+        - type: paragraph
+          name: Scaling available
+          content: 'Yes'
+          tertiarySections:
+            - type: list
+              name: Scaling type
+              content:
+                - Scales automatically
+                - Users can scale through the interface
+        - type: paragraph
+          name: Independence of resources
+          content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat.
+        - type: list
+          name: Usage Reporting
+          content:
+              - API
+              - Email
+              - SMS
+      - name: Backups and recovery
+        secondarySections:
+        - type: paragraph
+          name: Does this supplier provide backup and recovery?
+          content: 'Yes'
+          tertiarySections:
+          - type: list
+            name: What's backed up
+            content:
+              - Virtual machines
+              - Databases
+          - type: paragraph
+            name: Backup controls
+            content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat.
+          - type: list
+            name: Datacentre setup
+            content:
+              - Multiple datacentres with disaster recovery
+              - Multiple datacentres
+              - Single datacentre with multiple copies
+              - Single datacentre
+          - type: list
+            name: Scheduling backups
+            content:
+              - Users schedule backups through a web interface
+              - Users must contact the support team to schedule backups
+              - Supplier controls the whole backup schedule
+          - type: list
+            name: Backup recovery
+            content: 
+              - Users can recover backups themselves, for example through a web interface
+              - Users contact the support team
+      - name: Onboarding and offboarding
+        secondarySections:
+        - type: paragraph
+          name: Getting started
+          content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat.
+        - type: paragraph
+          name: Service documentation
+          content: 'Yes'
+          tertiarySections:
+          - type: list
+            name: Service documentation
+            content:
+              - HTML
+              - ODF
+              - PDF
+        - type: paragraph
+          name: End-of-contract data extraction
+          content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat.
+        - type: paragraph
+          name: End-of-contract process
+          content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat.
+      - name: Public sector networks
+        secondarySections:
+        - type: paragraph
+          name: Public sector networks
+          content: 'Yes'
+          tertiarySections:
+          - type: list
+            name: Public sector network type
+            content:
+              - Public Service Network (PSN)
+              - Joint Academy Network (JANET)
+              - Scottish Wider Area Network (SWAN)
+      - name: Energy efficiency
+        secondarySections:
+        - type: paragraph
+          name: Energy-efficient datacentres
+          content: 'Yes'
+      - name: Data-in-transit protection
+        type: paragraph       
+        content: "Read about the government's <a href='http://www.ncsc.gov.uk/guidance/cloud-security-principle-1-data-transit-protection' target='_blank' rel='noopener noreferrer'>1st cloud security principle: 'Data-in-transit protection' (link opens in a new tab)</a>"
+        secondarySections:
+        - type: list
+          name: Data protection between the buyer's and supplier's networks
+          content:
+              - Private network or public sector network
+              - Legacy SSl and TLS (under1.2)
+              - Bonded fibre optic connections
+        - type: list
+          name: Data protefction within the supplier's network
+          content:
+              - Private network or public sector network
+              - TLS (Version 1.2 or above)
+      - name: Asset protection
+        type: paragraph       
+        content: "Read about the government's <a href='https://www.ncsc.gov.uk/guidance/cloud-security-principle-2-asset-protection-and-resilience#physical' target='_blank' rel='oopener noreferrer'> 2nd cloud security principle: ‘Asset protection and resilience’ (link opens in a new tab)</a>"
+        secondarySections:
+        - type: paragraph
+          name: Knowledge of data storage and processing locations
+          content: 'Yes'
+        - type: list
+          name: Data storage and processing locations
+          content:
+              - United Kingdom
+              - European Economic Area (EEA)
+        - type: paragraph
+          name: User control over data storage and processing?
+          content: 'Yes'
+          tertiarySections:
+          - type: paragraph
+            name: Datacentre security standards
+            content: Supplier-defined controls
+          - type: paragraph
+            name: Penetration testing frequency
+            content: At least every 6 months
+        - type: list
+          name: Data-at-rest protection
+          content:
+              - Physical access control, complying with CSA CCM v3.0
+              - Physical access control, complying with SSAE-16 / ISAE 3402
+              - Physical access control, complying with another standard
     price: 0.45 per terabyte
     metaCategories:
       - key: Minimum contract perdiod
         value: 1 hour
       - key: Free trial available at
-        value: www.example.com/freetrial-long-url-here-gonna-break-some-stuff
+        type: link
+        value: www.example.com/freetrial-long-url-here-gonna-break-some-stuff  
       - key: Service ID
         value: 123456789
       - key: Framework
-        value: G-Cloud 9
+        value: G-Cloud 9  
     documents:
       - Price
       - SFIA Rate card
-    contact: 
-      - Clare Jackson
-      - 01442 883366
+    contact:
+        - Clare Jackson
+        - 01442 883366
     contactemail: Procurement.Portal@kcom.com
 

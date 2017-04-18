@@ -116,3 +116,20 @@
 .document-list {
   padding-bottom: 10px;
 }
+// For example
+.first-layer {
+  border-left: 5px solid navy;
+  padding-left: 10px;
+}
+.second-layer {
+  border-left: 5px solid mediumblue;
+  padding-left: 10px;
+}
+.third-layer {
+  border-left: 5px solid mediumslateblue;
+  padding-left: 10px;
+}
+.fourth-layer {
+  border-left: 5px solid cornflowerblue;
+  padding-left: 10px;
+}

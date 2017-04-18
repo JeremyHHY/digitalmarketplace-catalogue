@@ -1,0 +1,71 @@
+pageTitle: Examples of looping through content
+list:
+  - advertising characters
+  - characters from The Office
+  - Coronation Street characters
+listWithTwo:
+  - title: Michael Jackson
+    content: Conga
+  - title: Jermain Jackson
+    content: Bass guitar
+  - title: Randy Jackson
+    content: Percussion
+listWithDifferentTypes: 
+  - contentType: list
+    title: This is a list
+    content:
+      - same
+      - content
+      - different
+      - treatment
+  - contentType: paragraph
+    title: This is a paragraph
+    content:
+      - same
+      - content
+      - different
+      - treatment
+  - contentType: link
+    title: This is a link
+    content:
+      - same
+      - content
+      - different
+      - treatment
+listWithManyLayers:
+  - title: First layer
+    content: First layer content
+    layerTwo:
+    - title: Second layer
+      content: Second layer content
+      layerThree: 
+      - title: Third layer
+        content: Third layer content
+        layerFour: 
+        - title: Fourth layer
+          content: Fourth layer content
+listWithManyLayersThatRepeats:
+  - title: First layer
+    content: First layer content
+    layerTwo:
+    - title: Second layer
+      content: Second layer content
+    - title: Second layer second time
+      content: Second layer content second time
+      layerThree: 
+      - title: Third layer
+        content: Third layer content
+      - title: Third layer second time
+        content: Third layer content second time
+        layerFour: 
+        - title: Fourth layer
+          content: Fourth layer content 
+        - title: Fourth layer second time
+          content: Fourth layer content second time
+    - title: Second layer third time
+      content: Second layer content third time
+      layerThree:  
+      - title: Third layer third time
+        content: Third layer content third time
+  - title: First layer second time
+    content: First layer content second time

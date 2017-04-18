@@ -1,0 +1,243 @@
+lotName: cloud hosting
+lotNameCaps: Cloud hosting
+lotURL: cloud-hosting-services
+
+section:
+  - name: Category
+    sectionId: category
+    selectionType: checkbox
+    primaryCategories: 
+    - name: Archiving, backup and disaster recovery
+      id: archiving-backup-and-disaster-recovery
+    - name: Compute and application hosting
+      id: compute-and-application-hosting
+    - name: Container service 
+      id: container-service 
+    - name: Content delivery network
+      id: content-delivery-network
+    - name: Data warehousing
+      id: data-warehousing
+    - name: NoSQL database 
+      id:  nosql-database 
+    - name: Relational database
+      id: relational-database
+    - name: Other database services
+      id: other-database-services
+    - name: Distributed denial of service attack (DDOS) protection
+      id: ddos-protection
+    - name: Firewall
+      id: firewall
+    - name: Infrastructure and platform security
+      id: infrastructure-and-platform-security
+    - name: Intrusion detection
+      id: intrusion-detection
+    - name: Load balancing
+      id: load-balancing
+    - name: Logging and analysis
+      id: logging-and-analysis
+    - name: Message queuing and processing
+      id: message-queuing-and-processing
+    - name: Networking (including network as a service)
+      id: networking
+    - name: Platform as a service (PaaS)
+      id: paas
+    - name: Protective monitoring
+      id: protective-monitoring
+    - name: Search
+      id: search
+      # subCategories:
+      # - name: poodle
+      #   id: poddle
+      # - name: pug
+      #   id: pug
+  - name: Reseller
+    sectionId: reseller
+    selectionType: radio
+    primaryCategories: 
+    - name: Not a reseller
+      id: not-a-reseller
+    - name: Reseller
+      id: reseller
+      subCategorySelectionType: checkbox
+      subCategoryTitle: Reseller type
+      subCategories:
+      - name: Providing extra features and support not available from the original supplier
+        id: reseller-extra-features
+      - name: Providing extra support
+        id: reseller-extra-support
+      - name: Not providing extra features or support
+        id: reseller-no-extra-features
+  - name: User support
+    sectionId: user-support
+    selectionType: checkbox
+    primaryCategories: 
+    - name: Email or online ticketing support
+      id: email-support
+      subCategorySelectionType: checkbox
+      subCategoryTitle: This is a subcategory title
+      subCategories:
+      - name: Support case management
+        id: case-management
+    - name: Phone support
+      id: phone-support
+      subCategorySelectionType: radio
+      subCategoryTitle: Phone support hours
+      subCategories:
+      - name: 24 hours, 7 days a week
+        id: phone-support-24-hours
+      - name:  9 to 5, 7 days a week
+        id: phone-support-office-7-days
+      - name:  9 to 5, Monday to Friday
+        id: phone-support-office-monday-friday
+    - name: Webchat support
+      id: webchat-support
+      subCategorySelectionType: radio
+      subCategoryTitle: Webchat support hours
+      subCategories:
+      - name: 24 hours, 7 days a week
+        id: phone-support-24-hours
+      - name:  9 to 5, 7 days a week
+        id: phone-support-office-7-days
+      - name:  9 to 5, Monday to Friday
+        id: phone-support-office-monday-friday
+    - name: Onsite support
+      id: onsite-support
+    - name: Support available to third-party suppliers
+      id: third-party-support
+  - name: Using the service
+    sectionId: using-the-service
+    selectionType: checkbox
+    primaryCategories: 
+    - name: Web interface
+      id: web-interface
+      subCategorySelectionType: checkbox
+      subCategoryTitle: Web interface accessibility
+      subCategories:
+      - name: WCAG 2.0 AAA 
+        id: web-interface-wcag2aaa
+      - name: WCAG 2.0 AA or EN 301 549
+        id: web-interface-wcag2aa
+      - name: WCAG 2.0 A
+        id: web-interface-wcag2a
+    - name: API
+      id: api
+      subCategorySelectionType: checkbox
+      subCategoryTitle: API automation tools
+      subCategories:
+      - name: Ansible
+        id: api-ansible
+      - name: Chef
+        id: api-chef
+      - name: OpenStack
+        id: api-openStack
+      - name: SaltStack
+        id: api-saltStack
+      - name: Terraform
+        id: api-terraform
+      - name: Puppet
+        id: api-puppet
+      - name: Other
+        id: api-other
+    - name: Command line interface
+      id: command-line-interface
+      subCategorySelectionType: checkbox
+      subCategoryTitle: Compatible operating systems
+      subCategories:
+      - name: Linux or Unix
+        id: cli-linux
+      - name: macOS
+        id: cli-macos
+      - name: Windows
+        id: cli-windows
+      - name: Other
+        id: cli-other
+
+services: 
+  - service0: 
+    supplierName: Smart421 Ltd 2
+    serviceName: Smart421 Hadoop in the Cloud Fooo 2
+    primarySections:
+      - name: Categories
+        type: list
+        content:
+          - NoSQL database
+          - Message queuing and processing
+          - Networking (including network as a service)
+          - Protective monitoring
+          - Search
+      - type: summary
+        content: Smart421 Hadoop in the Cloud is based on Skyscape’s implementation of Hadoop, enabling organisations to explore a big data solution delivered as a cloud service, minimising the investment in cost, time and risk associated with on-premises purchasing, provisioning and configuring Hadoop infrastructure, platforms and licenses.
+      - name: Features
+        type: list
+        content: 
+          - this is great hosting
+          - you should buy this, yeah!
+      - name: Benefits
+        type: list
+        content: 
+          - Foo
+          - Bar
+      - name: User support
+        secondarySections:
+          type: paragraph
+          name: Email support
+          content: Included in price of service
+        tertiarySections:
+          - type: paragraph
+            name: Email support
+            content: Included in price of service
+          - type: list
+            name: Online ticketing 
+            content: 
+              - 'Available'
+              - WCAG 2.0 AA
+          - type: paragraph
+            name: Response time
+            content: Within 2 hours for critical enquiries, 24 hours for general enquiries. Don’t worry, we’re really good at answering emails. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis
+          - type: paragraph
+            name: Phone support
+            content: Included in price of service
+          - type: paragraph
+            name: Phone support availability
+            content: 9 to 5 (UK time), Monday to Friday  
+          - type: paragraph
+            name: Web chat support
+            content: Included in price of service
+          - type: paragraph
+            name: Web chat availability
+            content: 24 hours, 7 days a week
+          - type: paragraph
+            name: Web chat accessbility standards
+            content: WCAG 2.0 AA or EN 301 549
+          - type: paragraph
+            name: Description of web chat testing
+            content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.
+          - type: paragraph
+            name: Onsite support
+            content: Included in price of service
+          - type: paragraph
+            name: Support levels
+            content: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.
+          - type: paragraph
+            name: Support availble to third parties
+            content: 'Yes'
+
+    price: 0.45 per terabyte
+    metaCategories:
+      - key: Minimum contract perdiod
+        value: 1 hour
+      - key: Free trial available at
+        type: link
+        value: www.example.com/freetrial-long-url-here-gonna-break-some-stuff  
+      - key: Service ID
+        value: 123456789
+      - key: Framework
+        value: G-Cloud 9  
+    documents:
+      - Price
+      - SFIA Rate card
+    contact:
+        - Clare Jackson
+        - 01442 883366
+    contactemail: Procurement.Portal@kcom.com
+
