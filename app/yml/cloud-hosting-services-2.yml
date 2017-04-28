@@ -157,6 +157,8 @@ services:
     supplierName: Smart421 Ltd 2
     serviceName: Smart421 Hadoop in the Cloud Fooo 2
     primarySections:
+      - type: summary
+        content: Smart421 Hadoop in the Cloud is based on Skyscape’s implementation of Hadoop, enabling organisations to explore a big data solution delivered as a cloud service, minimising the investment in cost, time and risk associated with on-premises purchasing, provisioning and configuring Hadoop infrastructure, platforms and licenses.
       - name: Categories
         type: list
         content:
@@ -165,8 +167,6 @@ services:
           - Networking (including network as a service)
           - Protective monitoring
           - Search
-      - type: summary
-        content: Smart421 Hadoop in the Cloud is based on Skyscape’s implementation of Hadoop, enabling organisations to explore a big data solution delivered as a cloud service, minimising the investment in cost, time and risk associated with on-premises purchasing, provisioning and configuring Hadoop infrastructure, platforms and licenses.
       - name: Features
         type: list
         content: 

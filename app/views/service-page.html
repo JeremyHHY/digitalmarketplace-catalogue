@@ -27,92 +27,31 @@ Digital Marketplace prototype
     </div>
   </div>
 
-
-  <div class='grid-row'>
+  <div class='grid-row' style="padding-bottom: 75px">
     <div class='column-two-thirds'>
       <p>
         {{ services[service].serviceDescription }}
       </p>
       {% for section in services[service].primarySections %}
-        <h2 class='heading-medium'>
-          {{ section.name }}
-        </h2>
-        {% if section.type == 'summary' or section.type == 'paragraph' %}
-          <p>
-            {{ section.content|safe }}
-          </p>
-        {% elif section.type == 'list' %}
-        <ul class='bullet-list'>
-          {% for listItem in section.content %}
-            <li>{{ listItem }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-        {% for section2 in section.secondarySections %}
-        {% if section2.type == 'table' %}
-          hiiiiiiii
-        {%else%}
-          <h3 class='heading-small'>
-            {{ section2.name }}
-          </h3>
-          {% if section2.type == 'paragraph' %}
+        {% if section.name == "Categories" or section.type == "summary" or section.name == "Benefits" or section.name == "Features"%}
+          <h2 class='heading-medium'>
+            {{ section.name }}
+          </h2>
+          {% if section.type == 'summary' or section.type == 'paragraph' %}
             <p>
-              {{ section2.content|safe }}
+              {{ section.content|safe }}
             </p>
-          {% elif section2.type == 'list' %}
-            <ul class='bullet-list'>
-              {% for listItem in section2.content %}
-                <li>{{ listItem }}</li>
-              {% endfor %}
-            </ul>
-          {% elif section2.type == 'table' %}
-            <table class="summary-item-body">
-
-          <caption class="visuallyhidden">
-            Summary table with manual rows
-          </caption>
-          <thead class="summary-item-field-headings">
-            <tr>
-              <th scope="col" class="summary-item-field-heading-first">
-                <span class="visuallyhidden">Label</span>
-              </th>
-              <th scope="col" class="summary-item-field-heading">
-                <span class="visuallyhidden">Value</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="summary-item-row">
-              <td  class="summary-item-field-first">
-                <span>Service Name</span>
-              </td>
-              <td  class="summary-item-field">
-                <span>Service 1</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+          {% elif section.type == 'list' %}
+          <ul class='bullet-list'>
+            {% for listItem in section.content %}
+              <li>{{ listItem }}</li>
+            {% endfor %}
+          </ul>
           {% endif %}
-          {% endif %}
-          {% for section3 in section2.tertiarySections %}
-          <div class='tertiary-section'>
-            <h4 class=''>{{ section3.name }}:</h4>
-            {% if section3.type == 'paragraph' %}
-              <p class=''>{{ section3.content }}</p>
-            {% elif section3.type == 'list' %}
-              <ul class='bullet-list'>
-                {% for section4 in section3.content %}
-                <li>{{ section4 }}</li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </div>
-          {% endfor %}
-        {% endfor %}
+        {% endif %}
       {% endfor %}
-      </div>
-        <div class="column-full">
-      </div>
+    </div>
+
       
       <div class='column-one-third'>
         <h4 class='heading-medium'>{{ services[service].price }}</h4>
@@ -139,8 +78,73 @@ Digital Marketplace prototype
       <a href='mailto:{{ services[service].contactemail }}'>{{ services[service].contactemail }}</a>
     </div>
   </div>
-  </main>
+
+
+  <div class='grid-row'>
+    <div class='column-one-whole'>
+      {% set sectionIDNumber = 0 %}
+      {% set sectionID = "section_"+sectionIDNumber %}
+
+      {% for section in services[service].primarySections %}
+        {% if section.name != "Categories" and section.type != "summary" and section.name != "Benefits" and section.name != "Features"%}
+            {% set sectionIDNumber = sectionIDNumber + 1 %}
+            {% set sectionID = "section_"+sectionIDNumber %}
+            <div class='filter-control' data-target="{{ sectionID }}" data-target="plus-{{ sectionID }}" style="border-bottom: 1px solid lightgrey;">
+              <div class='plus' id="plus-{{ sectionID }}">
+                +
+              </div>
+              <div class='plus js-hidden' id="minus-{{ sectionID }}">
+                –
+              </div>
+              <h3 class='heading-medium' data-target="{{ sectionID }}">
+                {{ section.name }}
+              </h3>
+            </div>
+
+
+            <div class="js-hidden" id="{{ sectionID }}">
+
+              <table class="summary-item-body">
+                <caption class="visuallyhidden">
+                  Summary table with content field as list
+                </caption>
+                <thead class="summary-item-field-headings">
+                </thead>
+                <tbody>
+                  {% for section2 in section.secondarySections %}
+                    <tr class="summary-item-row">
+                      <td class="summary-item-field-first" style="font-size: 16px; width: 33.33%; vertical-align: text-top;">
+                        <span style="font-weight: bold;">{{section2.name}}</span>
+                      </td>
+                      <td  class="summary-item-field" style="font-size: 16px; vertical-align: text-top;">
+                        <span>
+                          {{section2.content}}
+                        </span>
+                      </td>
+                    </tr>
+                    {% for section3 in section2.tertiarySections %}
+                      <tr class="summary-item-row">
+                        <td  class="summary-item-field-first" style="font-size: 16px; width: 33.33%; vertical-align: text-top;">
+                          <span>{{section3.name}}</span>
+                        </td>
+                        <td  class="summary-item-field" style="font-size: 16px; vertical-align: text-top;">
+                          <span>
+                            {{section3.content}}
+                          </span>
+                        </td>
+                      </tr>
+                    {% endfor %}
+                  {% endfor %}
+                </tbody>
+              </table>
+
+            </div>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
+
+</main>
 
 {% endblock %}
-
-
